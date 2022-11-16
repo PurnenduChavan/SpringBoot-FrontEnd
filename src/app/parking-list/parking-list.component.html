@@ -1,0 +1,29 @@
+<!-- <p>parking-list works!</p> -->
+
+<h2>Parking List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Vehicle Number</th>
+            <th>Vehicle type</th>
+            <th>In time</th>
+            <th>Out Time</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let park of parks">
+        <td>{{park.vehiclenumber}}</td>  
+        <td>{{park.type}}</td>    
+        <td>{{park.intime}}</td>    
+        <td>{{park.outtime}}</td>  
+        <td>
+            <button (click)="updatePark(park.id)" class="btn btn-primary">Update</button>
+            <button (click)="deletePark(park.id)" class="btn btn-danger">Delete</button>
+
+
+        </td>  
+  
+        </tr>
+    </tbody>
+</table>
